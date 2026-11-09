@@ -26,6 +26,6 @@ string PhDStudent::getMSProject() const{
     return msProject;
 }
 
-string PhDStudent::getMSProject() const{
+string PhDStudent::getDissertation() const{
     return dissertation;
 }
