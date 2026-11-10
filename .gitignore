@@ -1,0 +1,5 @@
+backend_bridge
+backend_bridge.exe
+__pycache__/
+data/records.json
+data/*.tmp
