@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#004684">
+  <title>Aggie Central | University Management</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <svg aria-hidden="true" class="icon-library" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="m2 10 10-6 10 6-10 6-10-6ZM6 12.4V17c2 3 10 3 12 0v-4.6M22 10v7"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 7v6M12 17h.01"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 1.8 6.2L20 11l-6.2 1.8L12 19l-1.8-6.2L4 11l6.2-1.8L12 3ZM19 18l.8 2.2L22 21l-2.2.8L19 24l-.8-2.2L16 21l2.2-.8L19 18Z"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7v5h-5M4 17v-5h5M5.2 9a8 8 0 0 1 13.2-2L20 12M4 12l1.6 5a8 8 0 0 0 13.2-2"/></symbol>
+    <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2M6 14h12v8H6zM18 12h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  </svg>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span>A<span class="brand-amp">&amp;</span>T</span></div>
+        <div class="brand-copy"><strong>Aggie Central</strong><small>UNIVERSITY PORTAL</small></div>
+      </div>
+      <div class="side-divider"></div>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav aria-label="Main navigation" class="nav-list">
+        <button class="nav-link active" data-nav="dashboard"><svg class="icon"><use href="#i-grid"/></svg>Dashboard</button>
+        <button class="nav-link" data-nav="add-student"><svg class="icon"><use href="#i-plus"/></svg>Add Student</button>
+        <button class="nav-link" data-nav="registration"><svg class="icon"><use href="#i-book"/></svg>Course Registration</button>
+        <button class="nav-link" data-nav="records"><svg class="icon"><use href="#i-users"/></svg>Student Records</button>
+        <button class="nav-link" data-nav="academics"><svg class="icon"><use href="#i-cap"/></svg>Academic Work</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="side-mini-card">
+          <svg class="icon"><use href="#i-spark"/></svg>
+          <strong>AGGIE PRIDE</strong>
+          <p>Learn. Lead. Succeed.</p>
+        </div>
+        <div class="side-course">COMP 360 <span>•</span> Fall 2026</div>
+      </div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
+          <div class="school-icon">A<span>&amp;</span>T</div>
+          <div><div class="school-name">NORTH CAROLINA A&amp;T STATE UNIVERSITY</div><div class="school-subtitle">Student Management System</div></div>
+        </div>
+        <div class="topbar-right"><div class="connection"><span class="connection-dot" id="connection-dot"></span><span id="connection-label">Connecting...</span></div><div class="user-avatar" title="COMP 360 Student Portal">AG</div></div>
+      </header>
+
+      <main class="main-content">
+        <!-- DASHBOARD -->
+        <section class="page active" id="page-dashboard" aria-labelledby="dashboard-title">
+          <div class="hero">
+            <div class="hero-content">
+              <div class="eyebrow"><span class="eyebrow-line"></span>THE AGGIE EXPERIENCE</div>
+              <h1 id="dashboard-title">Welcome to <span>Aggie Central.</span></h1>
+              <p>Everything you need to manage student records, courses, and academic progress in one place.</p>
+              <button class="btn btn-gold" data-nav="add-student">Add a Student <svg class="icon"><use href="#i-arrow"/></svg></button>
+            </div>
+            <div class="hero-art" aria-hidden="true"><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div><div class="hero-letter">A<span>&amp;</span>T</div></div>
+          </div>
+          <div class="section-bar"><div><p class="section-kicker">YOUR OVERVIEW</p><h2>At a glance</h2></div><button class="text-button" id="refresh-dashboard"><svg class="icon"><use href="#i-refresh"/></svg> Refresh data</button></div>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-icon blue"><svg class="icon"><use href="#i-users"/></svg></div><div class="stat-label">Total Students</div><div class="stat-value" id="stat-total">0</div><div class="stat-foot">All registered students</div></div>
+            <div class="stat-card"><div class="stat-icon gold"><svg class="icon"><use href="#i-book"/></svg></div><div class="stat-label">Undergraduate</div><div class="stat-value" id="stat-ug">0</div><div class="stat-foot">Bachelor's programs</div></div>
+            <div class="stat-card"><div class="stat-icon cyan"><svg class="icon"><use href="#i-cap"/></svg></div><div class="stat-label">MS Students</div><div class="stat-value" id="stat-ms">0</div><div class="stat-foot">Master's programs</div></div>
+            <div class="stat-card"><div class="stat-icon purple"><svg class="icon"><use href="#i-clipboard"/></svg></div><div class="stat-label">PhD Students</div><div class="stat-value" id="stat-phd">0</div><div class="stat-foot">Doctoral programs</div></div>
+          </div>
+          <div class="dashboard-grid">
+            <section class="panel catalog-panel" aria-labelledby="catalog-title">
+              <div class="panel-heading"><div><div class="section-kicker">ACADEMIC CATALOG</div><h3 id="catalog-title">Available Courses</h3></div><span id="course-count" class="small-pill">0 courses</span></div>
+              <div class="table-scroll"><table class="data-table"><thead><tr><th>COURSE</th><th>COURSE NAME</th><th>CREDITS</th></tr></thead><tbody id="catalog-body"><tr><td colspan="3" class="empty-cell">Loading courses...</td></tr></tbody></table></div>
+              <div class="panel-footer"><button data-nav="registration" class="link-button">Go to Course Registration <svg class="icon"><use href="#i-arrow"/></svg></button></div>
+            </section>
+            <section class="panel shortcuts-panel" aria-labelledby="quick-title">
+              <div class="panel-heading"><div><div class="section-kicker">SHORTCUTS</div><h3 id="quick-title">Quick Actions</h3></div></div>
+              <button class="shortcut" data-nav="add-student"><span class="shortcut-icon"><svg class="icon"><use href="#i-plus"/></svg></span><span><strong>Add New Student</strong><small>Create a student record</small></span><svg class="icon shortcut-arrow"><use href="#i-chevron"/></svg></button>
+              <button class="shortcut" data-nav="registration"><span class="shortcut-icon"><svg class="icon"><use href="#i-book"/></svg></span><span><strong>Register a Course</strong><small>Enroll a student in a class</small></span><svg class="icon shortcut-arrow"><use href="#i-chevron"/></svg></button>
+              <button class="shortcut" data-nav="records"><span class="shortcut-icon"><svg class="icon"><use href="#i-users"/></svg></span><span><strong>View Student Records</strong><small>Courses, grades and GPA</small></span><svg class="icon shortcut-arrow"><use href="#i-chevron"/></svg></button>
+              <button class="shortcut" data-nav="academics"><span class="shortcut-icon"><svg class="icon"><use href="#i-cap"/></svg></span><span><strong>Manage Academic Work</strong><small>Projects and dissertations</small></span><svg class="icon shortcut-arrow"><use href="#i-chevron"/></svg></button>
+              <div class="tip-note"><svg class="icon"><use href="#i-check"/></svg><span>Your changes save locally and remain available when you restart the app.</span></div>
+            </section>
+          </div>
+        </section>
+
+        <!-- ADD STUDENT -->
+        <section class="page" id="page-add-student" aria-labelledby="add-title">
+          <div class="page-intro"><div class="section-kicker">STUDENT MANAGEMENT</div><h1 id="add-title">Add a New Student</h1><p>Enter a student's information to create a record in the university system.</p></div>
+          <div class="content-split">
+            <section class="panel form-panel"><div class="form-panel-title"><span class="form-title-icon"><svg class="icon"><use href="#i-users"/></svg></span><div><h2>Student Information</h2><p>All fields are required</p></div></div>
+              <form id="add-student-form">
+                <div class="field"><label for="add-type">Student Type</label><select id="add-type" name="type" required><option value="Undergraduate">Undergraduate (BS)</option><option value="MS">Master's (MS)</option><option value="PhD">Doctoral (PhD)</option></select></div>
+                <div class="form-grid"><div class="field"><label for="add-first">First Name</label><input id="add-first" name="firstName" maxlength="80" placeholder="e.g. Jordan" required></div><div class="field"><label for="add-last">Last Name</label><input id="add-last" name="lastName" maxlength="80" placeholder="e.g. Smith" required></div></div>
+                <div class="form-grid"><div class="field"><label for="add-id">Student ID</label><input id="add-id" name="id" maxlength="40" placeholder="e.g. 1001" required></div><div class="field"><label for="add-phone">Phone Number</label><input id="add-phone" name="phone" type="tel" maxlength="40" placeholder="e.g. 336-555-0192" required></div></div>
+                <div class="field"><label for="add-address">Address</label><input id="add-address" name="address" maxlength="300" placeholder="Street address, city, state" required></div>
+                <div class="form-actions"><button class="btn btn-primary" type="submit">Create Student <svg class="icon"><use href="#i-arrow"/></svg></button><button type="reset" class="btn btn-outline">Clear Form</button></div>
+              </form>
+            </section>
+            <aside class="help-column"><div class="help-card"><div class="help-emblem">A<span>&amp;</span>T</div><h3>One university.<br>Three student paths.</h3><p>Each student type builds on the same Student class through single inheritance.</p><div class="help-divider"></div><div class="help-row"><span class="mini-dot gold-dot"></span><span><b>Undergraduate</b><small>Course enrollment</small></span></div><div class="help-row"><span class="mini-dot blue-dot"></span><span><b>Master's</b><small>Courses + MS project</small></span></div><div class="help-row"><span class="mini-dot cyan-dot"></span><span><b>Doctoral</b><small>Courses + project + dissertation</small></span></div></div></aside>
+          </div>
+        </section>
+
+        <!-- REGISTRATION -->
+        <section class="page" id="page-registration" aria-labelledby="registration-title">
+          <div class="page-intro"><div class="section-kicker">COURSE MANAGEMENT</div><h1 id="registration-title">Course Registration</h1><p>Choose a student and a course to complete enrollment.</p></div>
+          <div class="content-split">
+            <section class="panel form-panel"><div class="form-panel-title"><span class="form-title-icon"><svg class="icon"><use href="#i-book"/></svg></span><div><h2>Enroll in a Course</h2><p>Students can enroll in any available course</p></div></div>
+              <form id="registration-form">
+                <div class="field"><label for="register-student">Select Student</label><select id="register-student" name="id" required><option value="">Select a student...</option></select></div>
+                <div class="field"><label for="register-course">Select Course</label><select id="register-course" name="courseCode" required><option value="">Select a course...</option></select></div>
+                <button type="submit" class="btn btn-primary btn-full">Register Course <svg class="icon"><use href="#i-arrow"/></svg></button>
+              </form>
+              <div class="info-strip"><svg class="icon"><use href="#i-alert"/></svg><span>A student cannot be enrolled in the same course twice.</span></div>
+            </section>
+            <section class="panel result-panel" id="registration-result" aria-live="polite"><div class="form-panel-title"><span class="form-title-icon pale"><svg class="icon"><use href="#i-clipboard"/></svg></span><div><h2>Registration Summary</h2><p>Student details and current enrolled courses</p></div></div><div id="registration-summary" class="result-empty"><svg class="icon"><use href="#i-book"/></svg><p>Select a student to view their registered courses.</p></div></section>
+          </div>
+          <section class="panel full-catalog"><div class="panel-heading"><div><div class="section-kicker">COURSE CATALOG</div><h3>All Available Courses</h3></div></div><div class="table-scroll"><table class="data-table"><thead><tr><th>CODE</th><th>NAME</th><th>CREDITS</th></tr></thead><tbody id="registration-catalog"></tbody></table></div></section>
+        </section>
+
+        <!-- RECORDS -->
+        <section class="page" id="page-records" aria-labelledby="records-title">
+          <div class="page-intro"><div class="section-kicker">STUDENT DIRECTORY</div><h1 id="records-title">Student Records</h1><p>Find students and review their profile, GPA, course grades, and research work.</p></div>
+          <div class="records-grid">
+            <section class="panel records-list-panel"><div class="panel-heading"><div><div class="section-kicker">DIRECTORY</div><h3>All Students</h3></div><span class="small-pill" id="records-count">0 students</span></div><div class="search-wrap"><svg class="icon"><use href="#i-search"/></svg><input id="records-search" type="search" placeholder="Search by name or ID..." aria-label="Search students"></div><div id="student-list" class="student-list"><div class="list-empty">No students added yet.</div></div></section>
+            <section class="panel record-detail-panel"><div class="panel-heading"><div><div class="section-kicker">STUDENT PROFILE</div><h3>Student Details</h3></div></div><div id="record-detail" class="record-placeholder"><div class="placeholder-icon"><svg class="icon"><use href="#i-users"/></svg></div><strong>No student selected</strong><p>Choose a student from the directory to view their information.</p></div></section>
+          </div>
+        </section>
+
+        <!-- ACADEMICS -->
+        <section class="page" id="page-academics" aria-labelledby="academics-title">
+          <div class="page-intro"><div class="section-kicker">ACADEMIC MANAGEMENT</div><h1 id="academics-title">Grades &amp; Research</h1><p>Update course grades and manage projects and dissertations.</p></div>
+          <div class="academic-grid">
+            <section class="panel form-panel"><div class="form-panel-title"><span class="form-title-icon"><svg class="icon"><use href="#i-clipboard"/></svg></span><div><h2>Assign Course Grade</h2><p>Update a student's grade and GPA</p></div></div>
+              <form id="grade-form"><div class="field"><label for="grade-student">Student</label><select id="grade-student" name="id" required></select></div><div class="field"><label for="grade-course">Registered Course</label><select id="grade-course" name="courseCode" required><option value="">Select a course...</option></select></div><div class="field"><label for="grade-value">Letter Grade</label><select id="grade-value" name="grade" required><option value="">Select grade...</option><option>A</option><option>B</option><option>C</option><option>D</option><option>F</option></select></div><button type="submit" class="btn btn-primary btn-full">Save Grade <svg class="icon"><use href="#i-check"/></svg></button></form>
+            </section>
+            <section class="panel form-panel"><div class="form-panel-title"><span class="form-title-icon"><svg class="icon"><use href="#i-cap"/></svg></span><div><h2>MS Project</h2><p>For MS and PhD students</p></div></div>
+              <form id="project-form"><div class="field"><label for="project-student">Student</label><select id="project-student" name="id" required></select></div><div class="field"><label for="project-title">Project Title</label><input id="project-title" name="title" maxlength="300" placeholder="e.g. AI Research Project" required></div><div class="academic-form-spacer"></div><button type="submit" class="btn btn-primary btn-full">Save MS Project <svg class="icon"><use href="#i-check"/></svg></button></form>
+            </section>
+            <section class="panel form-panel"><div class="form-panel-title"><span class="form-title-icon"><svg class="icon"><use href="#i-cap"/></svg></span><div><h2>PhD Dissertation</h2><p>For doctoral students only</p></div></div>
+              <form id="dissertation-form"><div class="field"><label for="dissertation-student">Student</label><select id="dissertation-student" name="id" required></select></div><div class="field"><label for="dissertation-title">Dissertation Title</label><input id="dissertation-title" name="title" maxlength="300" placeholder="e.g. Advanced Machine Learning" required></div><div class="academic-form-spacer"></div><button type="submit" class="btn btn-primary btn-full">Save Dissertation <svg class="icon"><use href="#i-check"/></svg></button></form>
+            </section>
+          </div>
+          <div class="degree-callout"><svg class="icon"><use href="#i-alert"/></svg><span><strong>Degree-level rules:</strong> Undergraduate students can register for courses only. MS students can register for courses and MS projects. PhD students can register for courses, MS projects, and dissertations.</span></div>
+        </section>
+      </main>
+      <footer class="footer"><span>NC A&amp;T University Management Portal <span class="footer-divider">•</span> COMP 360 Project</span><span>Built with Aggie Pride <span class="gold-heart">◆</span></span></footer>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
